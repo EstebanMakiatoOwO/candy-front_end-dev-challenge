@@ -6,7 +6,7 @@ import { ProfileButton } from "./ProfileButton";
 
 export const HeaderNavbar = () => {
   return (
-    <header className="sticky top-0 left-0 z-20 w-full h-24 bg-white flex items-center justify-between px-8 border-b border-gray-300">
+    <header className="sticky top-0 left-0 z-20 w-full h-24 bg-white flex items-center justify-between px-8 border-b border-gray-300 animate-fade-in-down">
       <div className="flex flex-1 items-center min-w-0 gap-80">
         <button
           type="button"
@@ -16,10 +16,12 @@ export const HeaderNavbar = () => {
           <img
             src={LogoIcon}
             alt="Candy logo"
-            className="w-11 h-11 object-contain"
+            className="w-11 h-11 object-contain drop-shadow-lg hover:animate-bounce"
           />
         </button>
-        <SearchBar />
+        <div className="transition-all duration-300 w-80">
+          <SearchBar />
+        </div>
       </div>
 
       <div className="flex items-center gap-8">
